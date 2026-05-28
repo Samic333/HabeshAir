@@ -31,8 +31,11 @@ include __DIR__ . '/includes/header.php';
     <h2>Limitation of liability</h2>
     <p>To the fullest extent permitted by law, HabeshAir's liability is limited to the coordination fees paid for the specific flight in question. We are not responsible for indirect, incidental, or consequential damages arising from operator-side events including delay, cancellation, weather, regulatory restrictions, or technical issues.</p>
 
+    <h2>Who operates HabeshAir</h2>
+    <p>HabeshAir is a brand operated by <strong>Samic Ventures LLC</strong>, a Wyoming (USA) limited liability company, 30 N Gould St, Ste N, Sheridan, WY 82801, USA. HabeshAir acts solely as a charter broker and arranges carriage performed by independent, licensed third-party air carriers; it is not itself an air carrier and does not operate aircraft.</p>
+
     <h2>Governing law</h2>
-    <p>These terms are governed by the laws of the jurisdiction in which HabeshAir is established, without regard to conflict-of-law principles.</p>
+    <p>These terms are governed by the laws of the State of Wyoming, USA, without regard to conflict-of-law principles.</p>
 
     <h2>Contact</h2>
     <p>Questions about these terms: <a href="mailto:<?= e(cfg('app.email')) ?>"><?= e(cfg('app.email')) ?></a>.</p>

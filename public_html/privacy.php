@@ -13,6 +13,9 @@ include __DIR__ . '/includes/header.php';
     <h1>Privacy Policy</h1>
     <p><em>Last updated: <?= date('F Y') ?>.</em></p>
 
+    <h2>Who we are</h2>
+    <p>HabeshAir is a brand operated by <strong>Samic Ventures LLC</strong>, a Wyoming (USA) limited liability company, 30 N Gould St, Ste N, Sheridan, WY 82801, USA, which is the data controller for information collected through this site.</p>
+
     <h2>What we collect</h2>
     <p>When you request a charter, contact us, or use this site, we collect: your name, email, phone, organization (if provided), trip details (route, dates, payload, special requirements), preferred contact method, message content, and basic technical data (IP address, user agent, timestamps) for security and rate-limiting.</p>
 
