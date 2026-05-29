@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 720" role="img" aria-label="A private jet climbing through a golden-hour sky">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1628"/>
+      <stop offset=".42" stop-color="#122742"/>
+      <stop offset=".74" stop-color="#5c4630"/>
+      <stop offset="1" stop-color="#cf9a3e"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="74%" cy="66%" r="46%">
+      <stop offset="0" stop-color="#ffe9b0" stop-opacity=".95"/>
+      <stop offset=".28" stop-color="#f0c668" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#f0c668" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trail" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9b0" stop-opacity=".95"/>
+      <stop offset=".5" stop-color="#e6b961" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#e6b961" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="jetbody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1019"/>
+      <stop offset="1" stop-color="#1d3047"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="soft2" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- sky -->
+  <rect width="760" height="720" fill="url(#sky)"/>
+  <!-- low sun glow -->
+  <rect width="760" height="720" fill="url(#sun)"/>
+
+  <!-- distant cloud bands (soft) -->
+  <g filter="url(#soft)" opacity=".9">
+    <ellipse cx="560" cy="520" rx="260" ry="40" fill="#f3d28a" opacity=".5"/>
+    <ellipse cx="300" cy="600" rx="320" ry="46" fill="#caa564" opacity=".38"/>
+    <ellipse cx="640" cy="650" rx="240" ry="44" fill="#e8c884" opacity=".3"/>
+    <ellipse cx="160" cy="500" rx="200" ry="30" fill="#9a7d4d" opacity=".22"/>
+  </g>
+  <!-- foreground cloud, darker -->
+  <g filter="url(#soft)" opacity=".85">
+    <ellipse cx="420" cy="690" rx="420" ry="60" fill="#1a1408" opacity=".5"/>
+  </g>
+
+  <!-- contrail sweeping down-left from the jet -->
+  <path d="M598 168 C520 250, 360 360, 150 560" fill="none" stroke="url(#trail)"
+        stroke-width="9" stroke-linecap="round" filter="url(#soft2)"/>
+  <path d="M598 168 C520 250, 360 360, 150 560" fill="none" stroke="url(#trail)"
+        stroke-width="2.4" stroke-linecap="round" opacity=".9"/>
+
+  <!-- jet, climbing up-right -->
+  <g transform="translate(602,150) rotate(-30)">
+    <!-- swept main wings -->
+    <path d="M6 -1 L-40 -30 L-16 -3 Z" fill="#0c1422"/>
+    <path d="M6 1 L-40 28 L-16 3 Z" fill="#0c1422"/>
+    <!-- horizontal stabilizers (small, at tail) -->
+    <path d="M-52 -1 L-72 -12 L-58 -2 Z" fill="#0e1828"/>
+    <path d="M-52 1 L-72 10 L-58 2 Z" fill="#0e1828"/>
+    <!-- fuselage: sleek, pointed nose at right -->
+    <path d="M62 0 C42 -3.4 -10 -4 -58 -1.4 C-66 -1.2 -70 0 -70 0
+             C-70 0 -66 1.2 -58 1.4 C-10 4 42 3.4 62 0 Z" fill="url(#jetbody)"/>
+    <!-- vertical tail fin -->
+    <path d="M-56 -0.5 L-72 -20 L-50 -2 Z" fill="#0c1422"/>
+    <!-- gold rim light along the top of the fuselage -->
+    <path d="M60 -0.6 C40 -3 -6 -3.6 -48 -1.6" fill="none" stroke="#f0d488" stroke-width="1.3" opacity=".75" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -472,6 +472,25 @@ p  { margin: 0 0 1em; }
 
 /* --- HERO: layered, animated, premium --- */
 .hero { isolation: isolate; }
+.hero .container { position: relative; z-index: 2; }
+
+/* Homepage hero golden-hour jet art (right side, masked to fade into navy) */
+.hero-art {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: 62%; z-index: 0; pointer-events: none;
+  background: url('/assets/images/hero-jet.svg') right center / cover no-repeat;
+  opacity: .92;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.35) 30%, #000 62%);
+          mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.35) 30%, #000 62%);
+  animation: heroArtIn 1.4s var(--ease-out-soft) both;
+  animation-delay: .2s;
+}
+@keyframes heroArtIn { from { opacity: 0; transform: scale(1.06); } to { opacity: .92; transform: none; } }
+@media (max-width: 980px) {
+  .hero-art { width: 100%; opacity: .28;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 55%);
+            mask-image: linear-gradient(to bottom, transparent 0%, #000 55%); }
+}
 .hero::before {
   content: ""; position: absolute; inset: -20% -10% auto -10%; height: 120%;
   background:

@@ -11,7 +11,8 @@ $page = [
 include __DIR__ . '/includes/header.php';
 ?>
 
-<section class="hero">
+<section class="hero hero-home">
+  <div class="hero-art" aria-hidden="true"></div>
   <div class="container">
     <span class="hero-badge">Premium Air Charter Brokerage · Africa &amp; Beyond</span>
     <h1>Premium Air Charter,<br>Africa &amp; Beyond</h1>
