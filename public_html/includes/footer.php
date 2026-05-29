@@ -20,7 +20,11 @@
     <div>
       <a href="/" class="brand brand-light">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 3 L20 14 L31 16 L20 18 L16 29 L12 18 L1 16 L12 14 Z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+            <circle cx="16" cy="16" r="11.5" stroke="currentColor" stroke-width=".9" opacity=".5"/>
+            <path d="M16 4 Q17.7 14.3 28 16 Q17.7 17.7 16 28 Q14.3 17.7 4 16 Q14.3 14.3 16 4 Z" fill="currentColor"/>
+            <circle cx="24.8" cy="7.2" r="1.7" fill="currentColor"/>
+          </svg>
         </span>
         <span class="brand-name">Habesh<span class="brand-accent">Air</span></span>
       </a>
@@ -54,10 +58,13 @@
       </ul>
     </div>
   </div>
+  <div class="container footer-disclosure">
+    <p><?= e(brand()) ?> is an air charter broker, not a direct air carrier, and does not own or operate aircraft. All flights are operated by licensed third-party air carriers (FAA-certificated Part 135 operators or their foreign equivalents) that maintain operational control of, and responsibility for, the flight.</p>
+  </div>
   <div class="container footer-bottom">
-    <p>&copy; <?= date('Y') ?> <?= e(cfg('app.company')) ?>. Charter requests are coordinated through a vetted global network of licensed charter operators and airlines.</p>
-    <p class="footer-attribution" style="margin-top:6px;font-size:0.85em;opacity:0.75;">
-      Operated by <a href="https://samicventures.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Samic Ventures LLC</a>, a Wyoming, USA limited liability company.
+    <p>&copy; <?= date('Y') ?> <?= e(brand()) ?>. Charter requests are coordinated through a vetted global network of licensed charter operators and airlines.</p>
+    <p class="footer-attribution">
+      Operated by <a href="https://samicventures.com" target="_blank" rel="noopener">Samic Ventures LLC</a>, a Wyoming, USA limited liability company.
     </p>
     <ul class="footer-meta">
       <li><a href="/privacy.php">Privacy</a></li>

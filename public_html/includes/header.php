@@ -7,14 +7,15 @@ require_once __DIR__ . '/schema-org.php';
 require_once __DIR__ . '/analytics.php';
 @track_pageview();
 
-$title       = $page['title']       ?? cfg('app.company') . ' — Premium Air Charter Africa & Beyond';
-$description = $page['description'] ?? 'HabeshAir coordinates premium VIP, cargo, humanitarian, and emergency charter flights across Africa, the Middle East, and beyond. Response within 60 minutes.';
+$title       = $page['title']       ?? brand() . ' — Premium Air Charter Africa & Beyond';
+$description = $page['description'] ?? 'HabeshAir is a premium air charter brokerage coordinating VIP, cargo, humanitarian, and emergency flights across Africa, the Middle East, and beyond. Quotes within 60 minutes.';
 $canonical   = $page['canonical']   ?? url($_SERVER['REQUEST_URI'] ?? '/');
 $ogImage     = $page['og_image']    ?? url('/assets/images/og-default.jpg');
 ?><!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0a1628">
 <title><?= e($title) ?></title>
@@ -26,14 +27,21 @@ $ogImage     = $page['og_image']    ?? url('/assets/images/og-default.jpg');
 <meta property="og:description" content="<?= e($description) ?>">
 <meta property="og:url" content="<?= e($canonical) ?>">
 <meta property="og:image" content="<?= e($ogImage) ?>">
-<meta property="og:site_name" content="<?= e(cfg('app.company')) ?>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="<?= e(brand()) ?>">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= e($title) ?>">
+<meta name="twitter:description" content="<?= e($description) ?>">
+<meta name="twitter:image" content="<?= e($ogImage) ?>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css?v=<?= e(@filemtime(__DIR__ . '/../assets/css/style.css') ?: 1) ?>">
-<link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 <link rel="alternate icon" href="/favicon.ico">
 
 <?php render_schema_org(); ?>
@@ -43,9 +51,13 @@ $ogImage     = $page['og_image']    ?? url('/assets/images/og-default.jpg');
 
 <header class="site-header" id="top">
   <div class="container header-row">
-    <a href="/" class="brand" aria-label="HabeshAir home">
+    <a href="/" class="brand" aria-label="<?= e(brand()) ?> home">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="32" height="32"><path d="M16 3 L20 14 L31 16 L20 18 L16 29 L12 18 L1 16 L12 14 Z" fill="currentColor"/></svg>
+        <svg viewBox="0 0 32 32" width="36" height="36" fill="none">
+          <circle cx="16" cy="16" r="11.5" stroke="currentColor" stroke-width=".9" opacity=".5"/>
+          <path d="M16 4 Q17.7 14.3 28 16 Q17.7 17.7 16 28 Q14.3 17.7 4 16 Q14.3 14.3 16 4 Z" fill="currentColor"/>
+          <circle cx="24.8" cy="7.2" r="1.7" fill="currentColor"/>
+        </svg>
       </span>
       <span class="brand-name">Habesh<span class="brand-accent">Air</span></span>
     </a>

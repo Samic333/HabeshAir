@@ -1,4 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="HabeshAir">
-  <rect width="64" height="64" rx="14" fill="#0a1628"/>
-  <path d="M32 10 L40 30 L60 32 L40 34 L32 54 L24 34 L4 32 L24 30 Z" fill="#d4a447"/>
+  <defs>
+    <linearGradient id="haGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0d488"/>
+      <stop offset=".5" stop-color="#d4a447"/>
+      <stop offset="1" stop-color="#b9852e"/>
+    </linearGradient>
+    <linearGradient id="haNavy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102742"/>
+      <stop offset="1" stop-color="#070f1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#haNavy)"/>
+  <circle cx="32" cy="32" r="22.5" fill="none" stroke="url(#haGold)" stroke-width="1.1" opacity=".55"/>
+  <path d="M32 9 Q35.2 28.8 55 32 Q35.2 35.2 32 55 Q28.8 35.2 9 32 Q28.8 28.8 32 9 Z" fill="url(#haGold)"/>
+  <circle cx="49.6" cy="14.4" r="2.7" fill="#f0d488"/>
 </svg>

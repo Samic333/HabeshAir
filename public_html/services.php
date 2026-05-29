@@ -22,7 +22,7 @@ include __DIR__ . '/includes/header.php';
 <section class="section">
   <div class="container">
     <div class="grid grid-2" style="gap:2rem">
-      <article class="card">
+      <article class="card" data-reveal style="--reveal-delay:.04s">
         <h2>VIP &amp; Private Charter</h2>
         <p>Discreet, comfortable travel for executives, dignitaries, and families. We coordinate aircraft sized for your route and party — light jets to executive widebodies — with attention to airport access, ground handling, and on-board service.</p>
         <ul class="list-check">
@@ -33,7 +33,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=VIP" class="btn btn-navy">Request VIP charter</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-reveal>
         <h2>Cargo Logistics</h2>
         <p>From general freight to perishable, dangerous goods, and live-animal shipments. We help match cargo class to aircraft type, manage AOG and time-critical hauls, and coordinate operator paperwork.</p>
         <ul class="list-check">
@@ -44,7 +44,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=Cargo" class="btn btn-navy">Request cargo charter</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-reveal>
         <h2>Humanitarian Relief</h2>
         <p>Aid logistics for NGOs, UN agencies, and humanitarian operators. We work into austere airfields across Africa with operators experienced in unpaved strips, short fields, and extended operations.</p>
         <ul class="list-check">
@@ -55,7 +55,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=Humanitarian" class="btn btn-navy">Request humanitarian flight</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-reveal>
         <h2>Emergency &amp; Medevac</h2>
         <p>Time-critical medical evacuation and emergency lift coordination. We mobilize on short notice with operators capable of patient transport configurations and the right routing for the case.</p>
         <ul class="list-check">
@@ -66,7 +66,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=Emergency-Medevac" class="btn btn-navy">Request medevac</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-reveal>
         <h2>Group &amp; Event Charter</h2>
         <p>Sports teams, conferences, weddings, and special events. Group lift on a single aircraft beats juggling commercial schedules — and brings everyone in together.</p>
         <ul class="list-check">
@@ -77,7 +77,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=Group-Event" class="btn btn-navy">Request group charter</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-reveal>
         <h2>Tailored &amp; Multi-leg</h2>
         <p>Connecting flights, repositioning, multi-stop tours, regional Africa and Middle East solutions. Tell us the destinations and the dates — we'll build the route.</p>
         <ul class="list-check">
@@ -92,9 +92,11 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <section class="section section-band-light">
-  <div class="container prose text-center">
-    <p class="eyebrow">A note on availability</p>
-    <p>Final aircraft availability, pricing, and operational approval depend on the licensed operator, regulatory permissions, route, airport handling, and safety considerations. HabeshAir coordinates requests and proposes options; the operator confirms the flight.</p>
+  <div class="container prose" data-reveal>
+    <div class="disclosure-box">
+      <h3>How HabeshAir works with operators</h3>
+      <p><?= e(brand()) ?> is an air charter broker, not a direct air carrier. We coordinate requests and propose options; a licensed third-party operator confirms and performs the flight and holds operational control. Final aircraft availability, pricing, and operational approval depend on the licensed operator, regulatory permissions, route, airport handling, weather, and safety considerations.</p>
+    </div>
   </div>
 </section>
 

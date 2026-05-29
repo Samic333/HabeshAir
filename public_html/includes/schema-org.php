@@ -11,13 +11,29 @@ function render_schema_org(): void {
     $org  = [
         '@context' => 'https://schema.org',
         '@type'    => 'Organization',
-        'name'     => (string)cfg('app.company', 'HabeshAir'),
+        'name'     => brand(),
+        'legalName'=> 'Samic Ventures LLC',
         'url'      => $base,
         'logo'     => $base . '/assets/images/logo.svg',
+        'image'    => $base . '/assets/images/og-default.jpg',
         'email'    => (string)cfg('app.email', 'info@habeshair.com'),
-        'telephone'=> (string)cfg('app.whatsapp_display', '+1 (480) 915-9971'),
-        'description' => 'Premium air charter brokerage coordinating VIP, cargo, humanitarian, and emergency flights across Africa, the Middle East, and beyond.',
+        'telephone'=> (string)cfg('app.whatsapp_display', '+1 (307) 289-7191'),
+        'description' => 'Premium air charter brokerage coordinating VIP, cargo, humanitarian, and emergency flights across Africa, the Middle East, and beyond. HabeshAir is an air charter broker, not a direct air carrier.',
         'areaServed'  => ['Africa', 'Middle East', 'Europe'],
+        'sameAs'      => ['https://samicventures.com'],
+        'parentOrganization' => [
+            '@type' => 'Organization',
+            'name'  => 'Samic Ventures LLC',
+            'url'   => 'https://samicventures.com',
+        ],
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress'   => '30 N Gould St, Ste N',
+            'addressLocality' => 'Sheridan',
+            'addressRegion'   => 'WY',
+            'postalCode'      => '82801',
+            'addressCountry'  => 'US',
+        ],
     ];
 
     $blocks = [$org];

@@ -21,7 +21,7 @@ include __DIR__ . '/includes/header.php';
 
 <section class="section">
   <div class="container">
-    <div class="prose">
+    <div class="prose" data-reveal>
       <div class="step"><div class="step-num">1</div><div>
         <h3>You submit a request</h3>
         <p>Use the request form, WhatsApp, or email. The more detail (route, dates, payload, urgency), the faster we move. For emergency or medevac flights, mark urgency as <em>Emergency</em>; that routes straight to the duty coordinator.</p>
@@ -50,7 +50,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <section class="section section-band-light">
-  <div class="container prose">
+  <div class="container prose" data-reveal>
     <h2>Timing — what to expect</h2>
     <ul class="list-check">
       <li><strong>Quote:</strong> typically within 60 minutes of request during business hours.</li>

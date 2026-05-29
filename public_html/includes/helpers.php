@@ -3,6 +3,15 @@
  * helpers.php — small utilities used across the site.
  */
 
+/**
+ * Canonical, customer-facing brand name. Single source of truth so the
+ * logo, copyright, schema.org, and <title> never drift apart again.
+ * (The production config.php historically carried a different spelling.)
+ */
+function brand(): string {
+    return 'HabeshAir';
+}
+
 function cfg(string $path, $default = null) {
     global $CONFIG;
     $parts = explode('.', $path);
@@ -79,7 +88,7 @@ function active_nav(string $key): string {
 
 function page_title(): string {
     global $page;
-    return $page['title'] ?? cfg('app.company') . ' — Premium Air Charter Africa & Beyond';
+    return $page['title'] ?? brand() . ' — Premium Air Charter Africa & Beyond';
 }
 
 function asset(string $path): string {

@@ -119,7 +119,7 @@ function build_default_subject(array $req): string {
 }
 
 function build_default_body(array $req): string {
-    $company = (string)cfg('app.company', 'HabeshAir');
+    $company = function_exists('brand') ? brand() : (string)cfg('app.company', 'HabeshAir');
     $email   = (string)cfg('app.email', 'info@habeshair.com');
     $waDisp  = (string)cfg('app.whatsapp_display', '');
 

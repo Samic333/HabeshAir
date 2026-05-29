@@ -12,7 +12,7 @@ return [
         'company'   => 'HabeshAir',
         'email'     => 'info@habeshair.com',
         'whatsapp'  => '14809159971',          // E.164 without + for wa.me links
-        'whatsapp_display' => '+1 (480) 915-9971',
+        'whatsapp_display' => '+1 (307) 289-7191',
     ],
     'db' => [
         'host'    => 'localhost',

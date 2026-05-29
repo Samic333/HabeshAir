@@ -20,7 +20,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <section class="section">
-  <div class="container prose">
+  <div class="container prose" data-reveal>
     <h2>What we do</h2>
     <p>HabeshAir is a charter coordination and brokerage platform. Through aviation partners, we offer access to over 5,000 aircraft worldwide. Our role is to understand your mission, source the right aircraft for the route and payload, and coordinate with the operator from the first call to safe landing.</p>
 

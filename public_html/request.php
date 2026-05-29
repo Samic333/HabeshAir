@@ -211,7 +211,11 @@ function checkedIf($cond): string { return $cond ? ' checked' : ''; }
       <div class="alert alert-error"><?= e($errors['_form']) ?></div>
     <?php endif; ?>
 
-    <form method="post" action="/request.php" class="form-card" data-form="request" novalidate>
+    <p class="hint" style="margin:-.5rem 0 1.25rem;max-width:60ch">
+      <?= e(brand()) ?> is an air charter broker. We coordinate your request with licensed third-party operators who perform the flight. Submitting this form is a request for a quote — it is not a binding booking.
+    </p>
+
+    <form method="post" action="/request.php" class="form-card" data-form="request" data-reveal novalidate>
       <?= csrf_field() ?>
       <div class="honeypot" aria-hidden="true">
         <label>Leave this empty <input type="text" name="_hp" tabindex="-1" autocomplete="off"></label>

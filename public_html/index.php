@@ -13,9 +13,9 @@ include __DIR__ . '/includes/header.php';
 
 <section class="hero">
   <div class="container">
-    <span class="hero-badge">Premium Air Charter Airline</span>
-    <h1>Premium Air Charter <br>Africa &amp; Beyond</h1>
-    <p class="lede">Reliable private aviation solutions for VIP, Cargo, and Humanitarian missions. We respond within 60 minutes to get you airborne.</p>
+    <span class="hero-badge">Premium Air Charter Brokerage · Africa &amp; Beyond</span>
+    <h1>Premium Air Charter,<br>Africa &amp; Beyond</h1>
+    <p class="lede">Reliable private aviation for VIP, cargo, humanitarian, and medevac missions. We source the right aircraft through licensed operators — and respond within 60 minutes to get you airborne.</p>
     <div class="hero-cta">
       <a href="/request.php" class="btn btn-gold btn-lg">Request a Charter</a>
       <a href="/services.php" class="btn btn-outline-light btn-lg">View Services</a>
@@ -23,19 +23,20 @@ include __DIR__ . '/includes/header.php';
     <div class="hero-trust">
       <span>Private</span><span>Cargo</span><span>Humanitarian</span><span>Emergency Support</span>
     </div>
+    <p class="hero-disclosure"><strong>HabeshAir is an air charter broker, not a direct air carrier.</strong> Flights are operated by licensed third-party air carriers that hold operational control.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="text-center prose" style="margin-bottom:2.5rem">
+    <div class="text-center prose" style="margin-bottom:2.5rem" data-reveal>
       <p class="eyebrow">What we do</p>
       <h2>Charter solutions for time-critical, complex, and high-value missions</h2>
       <p class="lede">HabeshAir coordinates flights through a vetted global network of licensed charter operators and airlines. Our trusted aviation partners give clients access to over 5,000 aircraft worldwide — from light jets to long-range, group, and cargo lift.</p>
     </div>
 
     <div class="grid grid-3">
-      <article class="card service-card">
+      <article class="card service-card" data-reveal style="--reveal-delay:.04s">
         <div class="icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M2 12l8-2 4-7 1 0 1 7 6 1v2l-6 1-1 7-1 0-4-7-8-2v-1z"/></svg>
         </div>
@@ -44,7 +45,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=VIP" class="card-cta">Request VIP charter →</a>
       </article>
 
-      <article class="card service-card">
+      <article class="card service-card" data-reveal style="--reveal-delay:.10s">
         <div class="icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 7h13l5 4v6h-2a2 2 0 1 1-4 0H10a2 2 0 1 1-4 0H3V7zm15 5h2.6L18 9.5V12z"/></svg>
         </div>
@@ -53,7 +54,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=Cargo" class="card-cta">Request cargo charter →</a>
       </article>
 
-      <article class="card service-card">
+      <article class="card service-card" data-reveal style="--reveal-delay:.16s">
         <div class="icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M11 2h2v6h6v2h-6v12h-2V10H5V8h6V2z"/></svg>
         </div>
@@ -62,7 +63,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=Humanitarian" class="card-cta">Request humanitarian flight →</a>
       </article>
 
-      <article class="card service-card">
+      <article class="card service-card" data-reveal style="--reveal-delay:.04s">
         <div class="icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
         </div>
@@ -71,7 +72,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=Emergency-Medevac" class="card-cta">Request medevac →</a>
       </article>
 
-      <article class="card service-card">
+      <article class="card service-card" data-reveal style="--reveal-delay:.10s">
         <div class="icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5z"/></svg>
         </div>
@@ -80,7 +81,7 @@ include __DIR__ . '/includes/header.php';
         <a href="/request.php?type=Group-Event" class="card-cta">Request group charter →</a>
       </article>
 
-      <article class="card service-card">
+      <article class="card service-card" data-reveal style="--reveal-delay:.16s">
         <div class="icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 1l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
         </div>
@@ -95,7 +96,7 @@ include __DIR__ . '/includes/header.php';
 <section class="section section-band-navy">
   <div class="container">
     <div class="grid grid-2" style="align-items:center">
-      <div>
+      <div data-reveal>
         <p class="eyebrow">Why HabeshAir</p>
         <h2>Speed and clarity, every step.</h2>
         <p class="lede">From your first message to engines on, we keep the request moving. Our network gives us options on short notice; our process keeps you informed.</p>
@@ -106,9 +107,9 @@ include __DIR__ . '/includes/header.php';
           <li>WhatsApp, email, or phone — your choice</li>
         </ul>
       </div>
-      <div class="metric-row">
-        <div class="metric"><div class="num">5,000+</div><div class="lbl">Aircraft accessible through partners</div></div>
-        <div class="metric"><div class="num">60 min</div><div class="lbl">Typical response time</div></div>
+      <div class="metric-row" data-reveal style="--reveal-delay:.1s">
+        <div class="metric"><div class="num" data-count="5000" data-suffix="+">5,000+</div><div class="lbl">Aircraft accessible through partners</div></div>
+        <div class="metric"><div class="num" data-count="60" data-suffix=" min">60 min</div><div class="lbl">Typical response time</div></div>
         <div class="metric"><div class="num">24/7</div><div class="lbl">Operations center</div></div>
         <div class="metric"><div class="num">Africa</div><div class="lbl">Middle East &amp; beyond</div></div>
       </div>
@@ -118,16 +119,16 @@ include __DIR__ . '/includes/header.php';
 
 <section class="section">
   <div class="container">
-    <div class="text-center prose" style="margin-bottom:2.5rem">
+    <div class="text-center prose" style="margin-bottom:2.5rem" data-reveal>
       <p class="eyebrow">How it works</p>
       <h2>From request to wheels-up</h2>
     </div>
     <div class="grid grid-2">
-      <div>
+      <div data-reveal>
         <div class="step"><div class="step-num">1</div><div><h3>Submit a request</h3><p>Tell us route, dates, payload, and preferences. Use the request form, WhatsApp, or email.</p></div></div>
         <div class="step"><div class="step-num">2</div><div><h3>Review &amp; sourcing</h3><p>We assess feasibility, source aircraft options through certified operators, and confirm permissions.</p></div></div>
       </div>
-      <div>
+      <div data-reveal style="--reveal-delay:.12s">
         <div class="step"><div class="step-num">3</div><div><h3>Proposal &amp; quote</h3><p>You receive a clear proposal: aircraft, pricing, timing, and any operational considerations.</p></div></div>
         <div class="step"><div class="step-num">4</div><div><h3>Coordination &amp; flight</h3><p>We coordinate with the operator and stay with you through to safe arrival.</p></div></div>
       </div>

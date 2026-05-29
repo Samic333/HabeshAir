@@ -44,7 +44,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <section class="section">
-  <div class="container prose">
+  <div class="container prose" data-reveal>
     <dl class="faq">
       <?php foreach ($faq as $qa): ?>
         <dt><?= e($qa['q']) ?></dt>

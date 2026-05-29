@@ -59,8 +59,30 @@ HabeshAir/
 
 ## Reference
 
+- **Canonical brand name: `HabeshAir`** (Habesh + Air). Confirmed 2026-05-29. The
+  customer-facing name is hardcoded in `includes/helpers.php` → `brand()` so the
+  logo, copyright, schema.org, and `<title>` never drift again. (Production
+  `config.php` historically carried `HabeshaAir`; `brand()` overrides it for display.)
+- Positioning: **air charter broker, NOT an airline / air carrier.** Never describe
+  HabeshAir as an "airline" in customer-facing copy — it is a brokerage. Broker
+  disclosures live in the footer, the hero, Terms §2, and the services page.
 - Domain (single 'a'): habeshair.com
 - Admin email: info@habeshair.com
-- WhatsApp: +1 (480) 915-9971
+- Display phone: +1 (307) 289-7191 (Samic Ventures LLC US line — shown in footer/contact strip)
+- WhatsApp link target: +1 480 915 9971 (E.164 `14809159971` — kept; wa.me link still goes here)
 - Operator language: "HabeshAir arranges flights on behalf of its clients with
   FAA Certified Part 135 air carriers or foreign equivalents."
+
+## 2026-05-29 — Premium pass + legal hardening
+
+- New gold "north-star + orbital" logo (`assets/images/logo.svg`, `favicon.svg`),
+  generated favicons (`favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`) and a
+  1200×630 social card (`assets/images/og-default.jpg`).
+- Scroll-reveal animations, animated hero, count-up metrics, header scroll state,
+  gold micro-interactions (`assets/css/style.css`, `assets/js/main.js`). All
+  `prefers-reduced-motion` safe; no-JS safe via the early `.js` class.
+- Fixed the hero badge that read "Premium Air Charter **Airline**" → "Brokerage".
+- Rewrote `terms.php` (broker/DOT Part 295-aligned disclosure, liability, indemnity,
+  sanctions, Wyoming governing law) and `privacy.php` (GDPR legal bases + EEA/UK
+  rights, CCPA/CPRA, international transfers, retention).
+- Fixed broken `og-default.jpg` + `favicon.ico` 404s; enriched schema.org.

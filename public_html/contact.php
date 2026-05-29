@@ -103,7 +103,7 @@ function old(string $f, array $old, $default = '') {
 <section class="section">
   <div class="container">
     <div class="grid grid-2" style="gap:2.5rem">
-      <div>
+      <div data-reveal>
         <h2>Direct contact</h2>
         <p><strong>Email</strong><br><a href="mailto:<?= e(cfg('app.email')) ?>"><?= e(cfg('app.email')) ?></a></p>
         <p><strong>WhatsApp</strong><br><a href="<?= e(whatsapp_link()) ?>" target="_blank" rel="noopener"><?= e(cfg('app.whatsapp_display')) ?></a></p>
@@ -116,7 +116,7 @@ function old(string $f, array $old, $default = '') {
         </div>
       </div>
 
-      <div>
+      <div data-reveal style="--reveal-delay:.12s">
         <h2>Send a message</h2>
 
         <?php if (!empty($errors['_form'])): ?>
